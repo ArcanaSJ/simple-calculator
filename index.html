@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST CALCULATOR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>SIMPLEST CALCULATOR</h2>
+        <form action="" method="get">
+            <!-- FIRST INPUT -->
+            <div class="num1">
+                <p>FIRST NUM :</p>
+                <input type="number" id="num1" >
+            </div>
+            <!-- SECOND INPUT -->
+            <div class="num2">
+                <p>SECOND NUM :</p>
+                <input type="number" id="num2">
+            </div>
+            <!-- BUTTONS WHICH ARE OPERATORS -->
+            <div class="buttons">
+            <!-- ADDITION -->
+            <button type="button" onclick="mySum()">Add</button> 
+            <!-- SUBTRACTION -->
+            <button type="button" onclick="myDiff()">Subtract</button>
+            <!-- MULTIPLICATION -->
+            <button type="button" onclick="myProd()">Multiply</button>
+            <!-- DIVISION -->
+            <button type="button" onclick="myQuot()">Divide</button>
+        </div>
+        </form>
+        <!-- RESULTS / OUTPUT OF THE OPERANDS -->
+        <p>RESULTS HERE:</p>
+        <p id="output"></p>
+    </div>
+</body>
+<!-- JAVASCRIPT -->
+<script>
+    function mySum(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let sum = parseInt(num1) + parseInt(num2);
+        document.getElementById('output').innerHTML = "The Sum is "+ sum;
+    }
+
+    function myDiff(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let diff = parseInt(num1) - parseInt(num2);
+        document.getElementById('output').innerHTML = "The Difference is "+ diff;
+    }
+
+    function myProd(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let prod = parseInt(num1) * parseInt(num2);
+        document.getElementById('output').innerHTML = "The Product is "+ prod;
+    }
+
+    function myQuot(){
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let quot = parseInt(num1) / parseInt(num2);
+        document.getElementById('output').innerHTML = "The Quotient is "+ quot;
+    }
+</script>
+</html>
